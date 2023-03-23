@@ -1,20 +1,26 @@
 public class Acai {
     public String tamanho;
     public double valor;
-    public boolean acrescimo;
+    public boolean acrescimoSorvete;
 
-            public double calcularacrescimento(boolean acrescimo){
-                if (acrescimo) {
-                    return valor + 2.00;
+    public double CalculaValor(Boolean acrescimoSorvete, String tamanho) {
+        if (tamanho.equals("p")) {
+            valor = 8.00;
 
-                }
-                return valor;
+        } else if (tamanho.equals("M")) {
+            valor = 10.00;
+        } else {
+            valor = 12.00;
 
-            }
-            public String consultaNome(){
-                return tamanho;
-            }
+        }
+        if (acrescimoSorvete){
+            valor += 2.00;
 
-
+        }
+        return valor;
+    }
 }
+
+
+
 
